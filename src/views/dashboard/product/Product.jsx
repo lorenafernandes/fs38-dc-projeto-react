@@ -41,6 +41,17 @@ function Home() {
                     <td>{item.name}</td>
                     <td>{item.brand}</td>
                     <td>{item.description}</td>
+                    <td>
+                      <div className="d-flex gap-3 justify-content-end">
+                        <button className="btn btn-danger btn-sm">
+                          Deletar
+                        </button>
+                        <button className="btn btn-info btn-sm">
+                          Editar
+                        </button>
+                      </div>
+                    
+                    </td>
                   </tr>
                 );
               })
