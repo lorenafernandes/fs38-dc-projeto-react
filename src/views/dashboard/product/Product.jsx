@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
+import { axios } from "axios";
 
 function Home() {
   const [productList, setProductList] = useState([]);
+  axios.get("http://localhost:3000/products")
+    .then(setProductList)
+    
   const createProduct = () => {
     fetch("http://localhost:3000/products")
       .then((response) => response.json())
